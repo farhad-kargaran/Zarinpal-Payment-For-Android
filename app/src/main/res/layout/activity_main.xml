@@ -33,6 +33,7 @@
         android:background="#000000"
         android:textColor="#ffffff"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="پرداخت"
         />
