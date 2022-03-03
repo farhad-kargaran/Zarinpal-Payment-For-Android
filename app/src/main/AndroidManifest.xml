@@ -13,23 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZarrinPalPayment_Android"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".GetUnverfiedTransactionActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".NewMethod"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="zarinpalpayment"
                     android:scheme="returna" />
@@ -37,17 +41,18 @@
         </activity>
         <activity
             android:name=".OldMethod"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="zarinpalpayment"
                     android:scheme="returnb" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

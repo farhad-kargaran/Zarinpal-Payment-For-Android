@@ -3,6 +3,8 @@ package ir.farhadkargaran.zarrinpalpayment_android;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
@@ -14,9 +16,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) actionBar.hide();
         setContentView(R.layout.activity_main);
         AppCompatButton btn_payment_old = findViewById(R.id.btn_payment_old);
         AppCompatButton btn_payment_new = findViewById(R.id.btn_payment_new);
+        AppCompatButton btn_payment_unverified = findViewById(R.id.btn_payment_unverified);
         btn_payment_old.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,NewMethod.class);
+                startActivity(intent);
+            }
+        });
+        btn_payment_unverified.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,GetUnverfiedTransactionActivity.class);
                 startActivity(intent);
             }
         });
