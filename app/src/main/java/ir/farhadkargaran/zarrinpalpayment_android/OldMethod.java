@@ -130,7 +130,6 @@ public class OldMethod extends AppCompatActivity {
             // Adding request to request queue
             queue.add(jsonObjReq);
         }
-
     }
     private void payment(Long amount){
         try {
@@ -138,7 +137,7 @@ public class OldMethod extends AppCompatActivity {
             PaymentRequest paymentRequest=ZarinPal.getPaymentRequest();
             paymentRequest.setMerchantID(merchand_id);
             paymentRequest.setAmount(amount);
-            paymentRequest.setCallbackURL("returnb://zarinpalpayment");
+            paymentRequest.setCallbackURL("returnb://bzarinpalpayment");
             paymentRequest.setDescription("پرداخت تست");
             paymentRequest.setMobile("0");
             purchase.startPayment(paymentRequest, new OnCallbackRequestPaymentListener() {

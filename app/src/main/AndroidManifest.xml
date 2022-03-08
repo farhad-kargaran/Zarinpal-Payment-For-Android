@@ -21,13 +21,13 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".NewMethod"
-            android:exported="true">
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -35,7 +35,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="zarinpalpayment"
+                    android:host="azarinpalpayment"
                     android:scheme="returna" />
             </intent-filter>
         </activity>
@@ -49,7 +49,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="zarinpalpayment"
+                    android:host="bzarinpalpayment"
                     android:scheme="returnb" />
             </intent-filter>
         </activity>
